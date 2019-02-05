@@ -1,0 +1,20 @@
+Options None
+AddDefaultCharset utf-8
+
+ErrorDocument 404 /index.html
+ErrorDocument 403 /index.html
+
+DirectoryIndex index.html
+
+AuthUserFile /home/g/goldenjeru/golden-jewelery.ru/.security/.htpasswd
+AuthGroupFile /home/g/goldenjeru/golden-jewelery.ru/.security/.htgroups
+
+AuthType Basic
+AuthName itu-library-1812
+#Require valid-user
+
+<Files ~ "^(.*\.)(html|js|css)$">
+Require valid-user
+#Require Group admin
+</Files>
+
